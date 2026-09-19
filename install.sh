@@ -14,9 +14,11 @@ sudo pacman -S \
     typst \
 	neovim \
     ripgrep \
+    firefox \
 	alacritty \
     tree-sitter \
     tree-sitter-cli \
+    ttf-liberation \
 	ttf-jetbrains-mono \
 	ttf-jetbrains-mono-nerd \
 	--noconfirm
@@ -28,9 +30,8 @@ mkdir -p ~/.config/alacritty
 cp -v ./dotfiles/alacritty.toml ~/.config/alacritty
 
 # Tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# mkdir -p ~/.config/tmux/plugins/catppuccin
-# git clone -b v2.3.0 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.3.0 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 cp -v ./dotfiles/tmux.conf ~/.tmux.conf
 
 # Bash
