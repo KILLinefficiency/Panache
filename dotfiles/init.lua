@@ -99,4 +99,22 @@ require('lualine').setup {
 require('nvim-tree').setup()
 vim.keymap.set('n', '<leader>a', ':NvimTreeOpen<CR>', { desc = 'File Browser via NvimTree' })
 
+local mocha = require('catppuccin.palettes').get_palette('mocha')
+require('catppuccin').setup({
+    flavour = 'mocha',
+    integrations = {
+        nvimtree = true
+    },
+    custom_highlights = function()
+        return {
+            NvimTreeNormal = { bg = mocha.base },
+            NvimTreeNormalNC = { bg = mocha.base },
+            NvimTreeWinSeparator = {
+                fg = mocha.surface1,
+                bg = mocha.base
+            }
+        }
+    end
+})
+
 vim.cmd.colorscheme 'catppuccin-mocha'
