@@ -12,10 +12,13 @@ sudo pacman -S \
     gzip \
     unzip \
     typst \
+    bluez \
 	neovim \
+    blueman \
     ripgrep \
     firefox \
 	alacritty \
+    bluez-utils \
     tree-sitter \
     tree-sitter-cli \
     ttf-liberation \
@@ -23,6 +26,7 @@ sudo pacman -S \
 	ttf-jetbrains-mono-nerd \
 	--noconfirm
 
+sudo systemctl enable --now bluetooth
 sudo chsh -s /usr/bin/zsh $USER
 
 # Alacritty
