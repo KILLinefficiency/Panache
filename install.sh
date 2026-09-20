@@ -3,7 +3,6 @@
 sudo pacman -S \
     fd \
 	git \
-	zsh \
     gcc \
 	tmux \
 	curl \
@@ -27,7 +26,6 @@ sudo pacman -S \
 	--noconfirm
 
 sudo systemctl enable --now bluetooth
-sudo chsh -s /usr/bin/zsh $USER
 
 # Alacritty
 mkdir -p ~/.config/alacritty
@@ -40,11 +38,6 @@ cp -v ./dotfiles/tmux.conf ~/.tmux.conf
 
 # Bash
 cp -v ./dotfiles/bashrc ~/.bashrc
-
-# ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-cp -v ./dotfiles/zshrc ~/.zshrc
 
 # NodeJS
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
