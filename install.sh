@@ -17,6 +17,7 @@ sudo pacman -S \
     ripgrep \
     firefox \
 	alacritty \
+    base-devel \
     bluez-utils \
     tree-sitter \
     tree-sitter-cli \
