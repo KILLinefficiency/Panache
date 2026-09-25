@@ -14,9 +14,11 @@ sudo pacman -S \
     bluez \
 	neovim \
     blueman \
+    aspell \
     ripgrep \
-    firefox \
-	alacritty \
+    chromium \
+    aspell-en \
+    alacritty \
     base-devel \
     bluez-utils \
     tree-sitter \

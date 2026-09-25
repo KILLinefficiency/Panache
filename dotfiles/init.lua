@@ -96,7 +96,13 @@ require('lualine').setup {
     }
 }
 
-require('nvim-tree').setup()
+require('nvim-tree').setup {
+    update_focused_file = {
+        enable = true,
+        update_root = true,
+    },
+    sync_root_with_cwd = true
+}
 vim.keymap.set('n', '<leader>a', ':NvimTreeOpen<CR>', { desc = 'File Browser via NvimTree' })
 
 local mocha = require('catppuccin.palettes').get_palette('mocha')
